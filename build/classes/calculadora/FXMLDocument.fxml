@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="393.0" prefWidth="255.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8" fx:controller="calculadora.FXMLDocumentController">
+    <children>
+      <TextField fx:id="visor" alignment="TOP_RIGHT" editable="false" layoutX="3.0" layoutY="6.0" prefHeight="63.0" prefWidth="249.0">
+         <font>
+            <Font size="28.0" />
+         </font>
+      </TextField>
+      <Button fx:id="limpa" layoutX="3.0" layoutY="76.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="60.0" prefWidth="60.0" text="A/C" />
+      <Button fx:id="divide" layoutX="66.0" layoutY="76.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="60.0" prefWidth="60.0" text="/" />
+      <Button fx:id="veses" layoutX="129.0" layoutY="76.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="60.0" prefWidth="60.0" text="*" />
+      <Button fx:id="menos" layoutX="192.0" layoutY="76.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="60.0" prefWidth="60.0" text="-" />
+      <Button fx:id="mais" layoutX="192.0" layoutY="139.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="60.0" prefWidth="60.0" text="+" />
+      <Button fx:id="nove" layoutX="129.0" layoutY="139.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="60.0" prefWidth="60.0" text="9" />
+      <Button fx:id="oito" layoutX="66.0" layoutY="139.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="60.0" prefWidth="60.0" text="8" />
+      <Button fx:id="sete" layoutX="3.0" layoutY="139.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="60.0" prefWidth="60.0" text="7" />
+      <Button fx:id="quatro" layoutX="3.0" layoutY="202.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="60.0" prefWidth="60.0" text="4" />
+      <Button fx:id="cinco" layoutX="66.0" layoutY="202.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="60.0" prefWidth="60.0" text="5" />
+      <Button fx:id="seis" layoutX="129.0" layoutY="202.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="60.0" prefWidth="60.0" text="6" />
+      <Button fx:id="porcento" layoutX="192.0" layoutY="202.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="60.0" prefWidth="60.0" text="\%" />
+      <Button fx:id="igual" layoutX="192.0" layoutY="265.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="124.0" prefWidth="60.0" text="=" />
+      <Button fx:id="tres" layoutX="129.0" layoutY="265.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="60.0" prefWidth="60.0" text="3" />
+      <Button fx:id="dois" layoutX="66.0" layoutY="265.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="60.0" prefWidth="60.0" text="2" />
+      <Button fx:id="um" layoutX="3.0" layoutY="265.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="60.0" prefWidth="60.0" text="1" />
+      <Button fx:id="zero" layoutX="3.0" layoutY="328.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="60.0" prefWidth="123.0" text="0" />
+      <Button fx:id="ponto" layoutX="129.0" layoutY="328.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="60.0" prefWidth="60.0" text="." />
+    </children>
+</AnchorPane>
