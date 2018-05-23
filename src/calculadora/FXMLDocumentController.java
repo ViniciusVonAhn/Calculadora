@@ -7,6 +7,7 @@ package calculadora;
 
 import java.net.URL;
 import java.util.ResourceBundle;
+import java.text.DecimalFormat;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -22,6 +23,8 @@ public class FXMLDocumentController implements Initializable {
     private double valor = 0;
     private Integer operador = -1;
     private boolean btigual = false;
+    DecimalFormat df = new DecimalFormat("#,###.00");
+    DecimalFormat df2 = new DecimalFormat("#.##");
     private boolean btponto = false;
     
     @FXML
@@ -195,19 +198,19 @@ public class FXMLDocumentController implements Initializable {
             visor.setText("");
         } else if(event.getSource() == igual && btigual == false)
         {
-            double operador2 = Double.parseDouble(visor.getText());
+            double operador2 = Double.parseDouble(Convert(visor.getText()));
             switch(operador)
             {
                 case 1: //SOMA
                     double resultado = valor + operador2;
-                    visor.setText(String.valueOf(resultado));
+                    visor.setText(String.valueOf(df.format(resultado)));
                     btigual = true;
                     resultado = 0;
                     valor = 0;
                     break;
                 case 2: //DIMINUI
                     resultado = valor - operador2;
-                    visor.setText(String.valueOf(resultado));
+                    visor.setText(String.valueOf(df.format(resultado)));
                     btigual = true;
                     resultado = 0;
                     valor = 0;
@@ -219,21 +222,21 @@ public class FXMLDocumentController implements Initializable {
                     }catch(Exception e){
                         visor.setText("Error");
                     }
-                    visor.setText(String.valueOf(resultado));
+                    visor.setText(String.valueOf(df.format(resultado)));
                     btigual = true;
                     resultado = 0;
                     valor = 0;
                     break;
                 case 4: //MULTIPLICADOR
                     resultado = valor * operador2;
-                    visor.setText(String.valueOf(resultado));
+                    visor.setText(String.valueOf(df.format(resultado)));
                     btigual = true;
                     resultado = 0;
                     valor = 0;
                     break;
                 case 5: //PORCENTAGEM
                     resultado = valor % operador2;
-                    visor.setText(String.valueOf(resultado));
+                    visor.setText(String.valueOf(df.format(resultado)));
                     btigual = true;
                     resultado = 0;
                     valor = 0;
@@ -241,6 +244,13 @@ public class FXMLDocumentController implements Initializable {
             }
         }
         
+    }
+    
+    public String Convert(String n){
+        n.replace( "." , "");
+        n.replace( "," , "");
+        System.out.println(n);
+        return n;
     }
     
     @Override
